@@ -106,7 +106,7 @@ M.buffer_enter_event = function()
     vim.cmd([[
     setlocal cursorline
     setlocal nowrap
-    setlocal nolist nospell nonumber norelativenumber
+    setlocal nolist nospell number relativenumber
     ]])
 
     local winhighlight =
@@ -124,7 +124,7 @@ M.buffer_enter_event = function()
   if vim.bo.filetype == "neo-tree-popup" then
     vim.cmd([[
     setlocal winhighlight=Normal:NeoTreeNormal,FloatBorder:NeoTreeFloatBorder
-    setlocal nolist nospell nonumber norelativenumber
+    setlocal nolist nospell number relativenumber
     ]])
     events.fire_event(events.NEO_TREE_POPUP_BUFFER_ENTER)
     last_buffer_enter_filetype = vim.bo.filetype
